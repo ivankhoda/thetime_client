@@ -1,0 +1,14 @@
+@import "../../styles/mixin";
+
+.App {
+  position: relative;
+  display: grid;
+  grid-template-columns: fit-content(100%) 1fr;
+  grid-template-rows: 3.5rem 1fr;
+  width: 100%;
+  min-height: 100vh;
+
+  grid-template-areas:
+    "Sidebar Header"
+    "Sidebar WorkingPanel";
+}

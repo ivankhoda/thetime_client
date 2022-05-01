@@ -1,0 +1,22 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  margin: 0;
+  label {
+    padding: 0.5rem;
+  }
+  input {
+    padding: 0.5rem;
+    min-width: 300px;
+  }
+  button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+.login_title {
+  text-align: center;
+}
