@@ -1,3 +1,5 @@
+import { Range } from "./Dashboard";
+
 export const calcTime = (diff: number) => {
   let diffInMilliSeconds = Math.abs(diff) / 1000;
 
@@ -26,4 +28,19 @@ export const calcTime = (diff: number) => {
   difference += minutes === 0 || hours === 1 ? `${minutes} minutes` : `${minutes} minutes`;
 
   return difference;
+};
+
+export const calculateTime = (arr: Range[]) => {
+  let newArr = arr.map((a) =>
+    Object.assign({
+      from: new Date(a.from).valueOf(),
+      to: new Date(a.to).valueOf(),
+    })
+  );
+  let difference: number = 0;
+  newArr.forEach((obj) => {
+    difference = difference + (obj.to - obj.from);
+  });
+
+  return calcTime(difference);
 };
